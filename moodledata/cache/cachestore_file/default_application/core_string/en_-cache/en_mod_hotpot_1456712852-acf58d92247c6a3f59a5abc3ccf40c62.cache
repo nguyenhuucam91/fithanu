@@ -1,0 +1,245 @@
+a:346:{s:10:"modulename";s:6:"HotPot";s:15:"modulename_help";s:714:"The HotPot module allows teachers to distribute interactive learning materials to their students via Moodle and view reports on the students' responses and results. .
+
+A single HotPot activity consists of an optional entry page, a single elearning exercise, and an optional exit page. The elearning exercise may be a static web page or an interactive web page which offers students text, audio and visual prompts and records their responses. The elearning exercise is created on the teacher's computer using authoring software and then uploaded to Moodle.
+
+A HotPot activity can handle exercises created with the following authoring software:
+
+* Hot Potatoes (version 6)
+* Qedoc
+* Xerte
+* iSpring
+* any HTML editor";s:15:"modulename_link";s:15:"mod/hotpot/view";s:16:"modulenameplural";s:7:"HotPots";s:20:"pluginadministration";s:21:"HotPot administration";s:10:"pluginname";s:13:"HotPot module";s:27:"subplugintype_hotpotattempt";s:13:"Output format";s:34:"subplugintype_hotpotattempt_plural";s:14:"Output formats";s:26:"subplugintype_hotpotreport";s:6:"Report";s:33:"subplugintype_hotpotreport_plural";s:7:"Reports";s:26:"subplugintype_hotpotsource";s:11:"Source file";s:33:"subplugintype_hotpotsource_plural";s:12:"Source files";s:18:"hotpot:addinstance";s:25:"Add a new HotPot activity";s:14:"hotpot:attempt";s:44:"Attempt a HotPot activity and submit results";s:24:"hotpot:deleteallattempts";s:47:"Delete any user's attempts at a HotPot activity";s:23:"hotpot:deletemyattempts";s:45:"Delete your own attempts at a HotPot activity";s:23:"hotpot:ignoretimelimits";s:40:"Ignores time limits on a HotPot activity";s:13:"hotpot:manage";s:40:"Change the settings of a HotPot activity";s:14:"hotpot:preview";s:25:"Preview a HotPot activity";s:24:"hotpot:reviewallattempts";s:45:"View any user's attempts at a HotPot activity";s:23:"hotpot:reviewmyattempts";s:43:"View your own attempts at a HotPot activity";s:11:"hotpot:view";s:40:"View the entry page of a HotPot activity";s:16:"configbodystyles";s:188:"By default, Moodle theme styles will override HotPot activity styles. However, for any styles selected here, the HotPot activity styles will be given priority over the Moodle theme styles.";s:17:"configenablecache";s:104:"Maintaining a cache of HotPot quizzes can dramatically speed up the delivery of quizzes to the students.";s:16:"configenablecron";s:75:"Specify the hours in your time zone at which the HotPot cron script may run";s:20:"configenablemymoodle";s:77:"This settings controls whether HotPots are listed on the MyMoodle page or not";s:21:"configenableobfuscate";s:152:"Obfuscating the text strings and URLs in javascript code makes it more difficult to guess answers by viewing the source of the HTML page in the browser.";s:15:"configenableswf";s:116:"Allow embedding of SWF files in HotPot activities. If enabled, this setting overrides filter_mediaplugin_enable_swf.";s:10:"configfile";s:18:"Configuration file";s:17:"configframeheight";s:136:"When a quiz is displayed within a frame, this value is the height (in pixels) of the top frame which contains the Moodle navigation bar.";s:14:"configlocation";s:27:"Configuration file location";s:15:"configlockframe";s:141:"If this setting is enabled, then the navigation frame, if used, will be locked so that it is not scrollable, not resizeable and has no border";s:20:"configmaxeventlength";s:381:"If a HotPot has both an open and a close time specified, and the difference between the two times is greater than the number of days specified here, then two separate calendar events will be added to the course calendar. For shorter durations, or when just one time is specified, only one calendar event will be added. If neither time is specified, no calendar event will be added.";s:18:"configstoredetails";s:338:"If this setting is enabled, then the raw XML details of attempts at HotPot quizzes will be stored in the hotpot_details table. This allows quiz attempts to be regraded in the future to reflect changes in the HotPot quiz scoring system. However, enabling this option on a busy site will cause the hotpot_details table to grow very quickly.";s:22:"event_attempt_reviewed";s:23:"HotPot attempt reviewed";s:34:"event_attempt_reviewed_description";s:111:"The user with id "{$a->userid}" reviewed an attempt at the "hotpot" activity with course module id "{$a->cmid}"";s:34:"event_attempt_reviewed_explanation";s:56:"A user has just reviewed an attempt at a HotPot activity";s:21:"event_attempt_started";s:22:"HotPot attempt started";s:33:"event_attempt_started_description";s:110:"The user with id "{$a->userid}" started an attempt at the "hotpot" activity with course module id "{$a->cmid}"";s:33:"event_attempt_started_explanation";s:55:"A user has just started an attempt at a HotPot activity";s:23:"event_attempt_submitted";s:24:"HotPot attempt submitted";s:35:"event_attempt_submitted_description";s:112:"The user with id "{$a->userid}" submitted an attempt at the "hotpot" activity with course module id "{$a->cmid}"";s:35:"event_attempt_submitted_explanation";s:57:"A user has just submitted an attempt at a HotPot activity";s:10:"event_base";s:21:"HotPot event detected";s:22:"event_base_description";s:110:"The user with id "{$a->userid}" initiated an event in the "hotpot" activity with course module id "{$a->cmid}"";s:22:"event_base_explanation";s:43:"An event was  detected by the HotPot module";s:19:"event_report_viewed";s:20:"HotPot report viewed";s:31:"event_report_viewed_description";s:119:"The user with id "{$a->userid}" viewed a report on attempts at the "hotpot" activity with course module id "{$a->cmid}"";s:31:"event_report_viewed_explanation";s:67:"A user has just viewed a report about attempts at a HotPot activity";s:9:"abandoned";s:9:"Abandoned";s:13:"abandonhotpot";s:87:"Your results so far will be saved but you cannot resume or restart this activity later.";s:14:"activitycloses";s:15:"Activity closes";s:13:"activitygrade";s:14:"Activity grade";s:13:"activityopens";s:14:"Activity opens";s:5:"added";s:5:"Added";s:12:"addquizchain";s:14:"Add quiz chain";s:17:"addquizchain_help";s:705:"Should all the quizzes in a quiz chain be added?
+
+**No**
+: only one quiz will be added to the course
+
+**Yes**
+: if the source file is a **quiz file**, it is treated as the start of a chain of quizzes and all quizzes in the chain will be added to the course with identical settings. Each quiz in the chain must have a link to the next file in the chain.
+
+If the source file is a **folder**, all recognizable quizzes in the folder will be added to the course to form a chain of quizzes with identical settings.
+
+If the source file is a **unit file**, such as a Hot Potatoes masher file or index.html, quizzes listed in the unit file will be added to the course as a chain of quizzes with identical settings.";s:10:"allowpaste";s:11:"Allow paste";s:15:"allowpaste_help";s:104:"If this setting is enabled, students will be allowed to copy, paste and drag text into text input boxes.";s:11:"allowreview";s:12:"Allow review";s:16:"allowreview_help";s:77:"If enabled, students may review their quiz attempts after the quiz is closed.";s:14:"analysisreport";s:13:"Item Analysis";s:9:"attempted";s:9:"Attempted";s:12:"attemptlimit";s:13:"Attempt limit";s:17:"attemptlimit_help";s:73:"The maximum number of attempts a student may have at this HotPot activity";s:13:"attemptnumber";s:14:"Attempt number";s:8:"attempts";s:8:"Attempts";s:12:"attemptscore";s:13:"Attempt score";s:17:"attemptsunlimited";s:18:"Unlimited attempts";s:7:"average";s:7:"Average";s:12:"averagescore";s:13:"Average score";s:10:"bodystyles";s:11:"Body styles";s:20:"bodystylesbackground";s:26:"Background color and image";s:15:"bodystylescolor";s:10:"Text color";s:14:"bodystylesfont";s:20:"Font size and family";s:16:"bodystylesmargin";s:21:"Left and right margin";s:12:"cacherecords";s:20:"HotPot cache records";s:16:"canrestarthotpot";s:63:"Your results so far will be saved and you can redo "{$a}" later";s:15:"canresumehotpot";s:66:"Your results so far will be saved and you can resume "{$a}" later.";s:6:"checks";s:6:"Checks";s:14:"checksomeboxes";s:23:"Please check some boxes";s:10:"clearcache";s:18:"Clear HotPot cache";s:12:"cleardetails";s:20:"Clear HotPot details";s:12:"clearedcache";s:33:"The HotPot cache has been cleared";s:14:"cleareddetails";s:36:"The HotPot details have been cleared";s:14:"clickreporting";s:22:"Enable click reporting";s:19:"clickreporting_help";s:251:"If enabled, a separate record is kept each time a "hint", "clue" or "check" button is clicked. This allows the teacher to see a very detailed report showing the state of the quiz at each click. Otherwise, only one record per attempt at a quiz is kept.";s:16:"clicktrailreport";s:12:"Click trails";s:6:"closed";s:24:"This activity has closed";s:5:"clues";s:5:"Clues";s:9:"completed";s:9:"Completed";s:19:"completioncompleted";s:24:"Require completed status";s:18:"completionmingrade";s:21:"Require minimum grade";s:14:"completionpass";s:21:"Require passing grade";s:17:"completionwarning";s:117:"These fields are disabled if the grade limit for this activity is "No grade" or the grade weighting is "No weighting"";s:21:"confirmdeleteattempts";s:44:"Do you really want to delete these attempts?";s:11:"confirmstop";s:54:"Are you sure you want to navigate away from this page?";s:7:"correct";s:7:"Correct";s:28:"couldnotinsertsubmissionform";s:32:"Could not insert submission form";s:7:"d_index";s:20:"Discrimination index";s:6:"delay1";s:7:"Delay 1";s:11:"delay1_help";s:56:"The minimum delay between the first and second attempts.";s:13:"delay1summary";s:43:"Time delay between first and second attempt";s:6:"delay2";s:7:"Delay 2";s:11:"delay2_help";s:60:"The minimum delay between attempts after the second attempt.";s:13:"delay2summary";s:33:"Time delay between later attempts";s:6:"delay3";s:7:"Delay 3";s:11:"delay3_help";s:820:"The setting specifies the delay between finishing the quiz and returning control of the display to Moodle.
+
+**Use specific delay**
+: control will be returned to Moodle after the specified delay.
+
+**Use settings in source/template file**
+: control will be returned to Moodle after the number of seconds specified in the source file or the template files for this output format.
+
+**Wait till student clicks OK**
+: control will be returned to Moodle after the student clicks the OK button on the completion message in the quiz.
+
+**Do not continue automatically**
+: control will not be returned to Moodle after the quiz is finished. The student will be free to navigate away from the quiz page.
+
+Note, the quiz results are always returned to Moodle immediately the quiz is completed or abandoned, regardless of this setting.";s:13:"delay3afterok";s:27:"Wait till student clicks OK";s:13:"delay3disable";s:29:"Do not continue automatically";s:14:"delay3specific";s:18:"Use specific delay";s:13:"delay3summary";s:33:"Time delay at the end of the quiz";s:14:"delay3template";s:36:"Use settings in source/template file";s:17:"deleteallattempts";s:19:"Delete all attempts";s:14:"deleteattempts";s:15:"Delete attempts";s:14:"detailsrecords";s:22:"HotPot details records";s:8:"duration";s:8:"Duration";s:11:"enablecache";s:19:"Enable HotPot cache";s:10:"enablecron";s:18:"Enable HotPot cron";s:14:"enablemymoodle";s:24:"Show HotPots on MyMoodle";s:15:"enableobfuscate";s:44:"Enable obfuscation of text and media players";s:9:"enableswf";s:49:"Allow embedding of SWF files in HotPot activities";s:14:"entry_attempts";s:8:"Attempts";s:11:"entry_dates";s:5:"Dates";s:13:"entry_grading";s:7:"Grading";s:11:"entry_title";s:18:"Unit name as title";s:7:"entrycm";s:17:"Previous activity";s:12:"entrycm_help";s:381:"This setting specifies a Moodle activity and a minimum grade for that activity which must be achieved before this HotPot activity can be attempted.
+
+The teacher can select a specific activity,
+or one of the following general purpose settings:
+
+* Previous activity in this course
+* Previous activity in this section
+* Previous HotPot in this course
+* Previous HotPot in this section";s:13:"entrycmcourse";s:32:"Previous activity in this course";s:14:"entrycmsection";s:40:"Previous activity in this course section";s:22:"entrycompletionwarning";s:54:"Before you start this activity, you must look at {$a}.";s:10:"entrygrade";s:23:"Previous activity grade";s:17:"entrygradewarning";s:148:"You cannot start this activity until you score {$a->entrygrade}% on {$a->entryactivity}. Currently, your grade for that activity is {$a->usergrade}%";s:17:"entryhotpotcourse";s:30:"Previous HotPot in this course";s:18:"entryhotpotsection";s:38:"Previous HotPot in this course section";s:12:"entryoptions";s:18:"Entry page options";s:17:"entryoptions_help";s:604:"These check boxes enable and disable the display of items on the HotPot's entry page.
+
+**Unit name as title**
+: if checked, the unit name will be displayed as the title of the entry page.
+
+**Grading**
+: if checked, the HotPot's grading information will be displayed on the entry page.
+
+**Dates**
+: if checked, the HotPot's open and close dates will be displayed on the entry page.
+
+**Attempts**
+: if checked, a table showing details of a user's previous attempts at this HotPot will be displayed on the entry page. Attempts that may be resumed will have a resume button displayed in the rightmost column.";s:9:"entrypage";s:15:"Show entry page";s:14:"entrypage_help";s:449:"Should the students be shown an initial page before starting the HotPot activity?
+
+**Yes**
+: the students will be shown an entry page before starting the HotPot. The contents of the entry page are determined by the HotPot's entry page options.
+
+**No**
+: the students will not be shown an entry page, and will start the HotPot immediately.
+
+An entry page is always shown to the teacher, in order to provide access to the reports and edit quizzes page";s:12:"entrypagehdr";s:10:"Entry page";s:9:"entrytext";s:15:"Entry page text";s:13:"exit_areyouok";s:27:"Hello, are you still there?";s:17:"exit_attemptscore";s:36:"Your score for that attempt was {$a}";s:11:"exit_course";s:6:"Course";s:16:"exit_course_text";s:30:"Return to the main course page";s:18:"exit_encouragement";s:13:"Encouragement";s:14:"exit_excellent";s:10:"Excellent!";s:13:"exit_feedback";s:18:"Exit page feedback";s:18:"exit_feedback_help";s:805:"These options enable and disable the display of feedback items on a HotPot's exit page.
+
+**Unit name as title**
+: if checked, the unit name will be displayed as the title of the exit page.
+
+**Encouragement**
+: if checked, some encouragement will displayed on the exit page. The encouragement depends on the HotPot grade:
+: **&gt; 90%**: Excellent!
+: **&gt; 60%**: Well done
+: **&gt; 0%**: Good try
+: **= 0%**: Are you OK?
+
+**Unit attempt grade**
+: if checked, the grade for the unit attempt that has just been completed will be displayed on the exit page.
+
+**Unit grade**
+: if checked the HotPot grade will be displayed on the exit page.
+
+In addition, if the unit grading method is highest a message to tell the user if the most recent attempt was equal to or better than their previous will be displayed.";s:12:"exit_goodtry";s:9:"Good try!";s:11:"exit_grades";s:6:"Grades";s:16:"exit_grades_text";s:42:"Look at your grades so far for this course";s:16:"exit_hotpotgrade";s:36:"Your grade for this activity is {$a}";s:24:"exit_hotpotgrade_average";s:51:"Your average grade so far for this activity is {$a}";s:24:"exit_hotpotgrade_highest";s:51:"Your highest grade so far for this activity is {$a}";s:30:"exit_hotpotgrade_highest_equal";s:50:"You equalled your previous best for this activity!";s:33:"exit_hotpotgrade_highest_previous";s:54:"Your previous highest grade for this activity was {$a}";s:29:"exit_hotpotgrade_highest_zero";s:58:"You have not scored higher than {$a} for this activity yet";s:10:"exit_index";s:5:"Index";s:15:"exit_index_text";s:29:"Go to the index of activities";s:10:"exit_links";s:15:"Exit page links";s:15:"exit_links_help";s:500:"These options enable and disable the display of certain navigation links on a HotPot's exit page.
+
+**Retry**
+: if multiple attempts are allowed at this HotPot and the student still has some attempts left, a link to allow the student to retry the HotPot will be displayed
+
+**Index**
+: if checked, a link to the HotPot index page will be displayed.
+
+**Course**
+: if checked, a link to the Moodle course page will be displayed.
+
+**Grades**
+: if checked, a link to the Moodle gradebook will be displayed.";s:9:"exit_next";s:4:"Next";s:14:"exit_next_text";s:21:"Try the next activity";s:12:"exit_noscore";s:46:"You have successfully completed this activity!";s:10:"exit_retry";s:5:"Retry";s:15:"exit_retry_text";s:19:"Retry this activity";s:13:"exit_welldone";s:10:"Well done!";s:15:"exit_whatnext_0";s:31:"What would you like to do next?";s:15:"exit_whatnext_1";s:23:"Choose your destiny ...";s:21:"exit_whatnext_default";s:35:"Please choose one of the following:";s:6:"exitcm";s:13:"Next activity";s:11:"exitcm_help";s:716:"This setting specifies a Moodle activity to be done after this HotPot activity is completed. The optional grade is the minimum grade for this HotPot activity that is required before the next activity is shown.
+
+The teacher can select a specific activity, or a one of the following general purpose settings:
+
+* Next activity in this course
+* Next activity in this section
+* Next HotPot activity in this course
+* Next HotPot activity in this section
+
+If other exit page options are disabled and the student has achieved the required grade on this HotPot activity, the next activity will be shown straight away. Otherwise, the student will be shown a link to the next activity, which they can click when they are ready.";s:12:"exitcmcourse";s:28:"Next activity in this course";s:13:"exitcmsection";s:36:"Next activity in this course section";s:9:"exitgrade";s:19:"Next activity grade";s:16:"exithotpotcourse";s:26:"Next HotPot in this course";s:17:"exithotpotsection";s:34:"Next HotPot in this course section";s:11:"exitoptions";s:17:"Exit page options";s:8:"exitpage";s:14:"Show exit page";s:13:"exitpage_help";s:413:"Should a exit page displayed after the HotPot quiz has been completed?
+
+**Yes**
+: the students will be shown an exit page when the HotPot is completed. The contents of the exit page are determined by the settings for the HotPot's exit page feedback and links.
+
+**No**
+: the students will not be shown an exit page. Instead, they will either go immediately to the next activity or return to the Moodle course page.";s:11:"exitpagehdr";s:9:"Exit page";s:8:"exittext";s:14:"Exit page text";s:15:"feedbackdiscuss";s:28:"Discuss this quiz in a forum";s:16:"feedbackformmail";s:13:"Feedback form";s:19:"feedbackmoodleforum";s:12:"Moodle forum";s:23:"feedbackmoodlemessaging";s:16:"Moodle messaging";s:12:"feedbacknone";s:4:"None";s:19:"feedbacksendmessage";s:33:"Send a message to your instructor";s:15:"feedbackwebpage";s:8:"Web page";s:12:"firstattempt";s:13:"First attempt";s:12:"forceplugins";s:19:"Force media plugins";s:17:"forceplugins_help";s:182:"If enabled, Moodle-compatible media players will play files such as avi, mpeg, mpg, mp3, mov and wmv. Otherwise, Moodle will not change the settings of any media players in the quiz.";s:11:"frameheight";s:12:"Frame height";s:6:"giveup";s:7:"Give Up";s:11:"grademethod";s:14:"Grading method";s:16:"grademethod_help";s:496:"This setting defines how the HotPot grade is calculated from the attempt scores.
+
+**Highest score**
+: the grade will be set to the highest score for an attempt at this HotPot activity.
+
+**Average scsore**
+: the grade will be set to the average score for attempts at this HotPot activity.
+
+**First attempt**
+: the grade will be set to the score of the first attempt at this HotPot activity.
+
+**Last attempt**
+: the grade will be set to the score of the most recent attempt at this HotPot activity.";s:14:"gradeweighting";s:15:"Grade weighting";s:19:"gradeweighting_help";s:86:"Grades for this HotPot activity will be scaled to this number in the Moodle gradebook.";s:12:"highestscore";s:13:"Highest score";s:5:"hints";s:5:"Hints";s:10:"hotpotname";s:20:"HotPot activity name";s:7:"ignored";s:7:"Ignored";s:10:"inprogress";s:11:"In progress";s:13:"isgreaterthan";s:15:"is greater than";s:10:"islessthan";s:12:"is less than";s:10:"lastaccess";s:11:"Last access";s:11:"lastattempt";s:12:"Last attempt";s:9:"lockframe";s:10:"Lock frame";s:14:"maxeventlength";s:50:"Maximum number of days for a single calendar event";s:18:"mediafilter_hotpot";s:19:"HotPot media filter";s:18:"mediafilter_moodle";s:31:"Moodle's standard media filters";s:14:"migratingfiles";s:33:"Migrating Hot Potatoes quiz files";s:13:"migratinglogs";s:27:"Migrating Hot Potatoes logs";s:17:"missingsourcetype";s:35:"HotPot record is missing sourcetype";s:7:"nameadd";s:4:"Name";s:12:"nameadd_help";s:461:"The name can be specfic text entered by the teacher or it can be automatically generated.
+
+**Get from source file**
+: the name will be extracted from the source file.
+
+**Use source file name**
+: the source file name will be used as the name.
+
+**Use source file path**
+: the source file path will be used as the name. Any slashes in the file path will be replaced by spaces.
+
+**Specific text**
+: the specific text entered by the teacher will be used as the name.";s:8:"nameedit";s:4:"Name";s:13:"nameedit_help";s:51:"The specific text that is displayed to the students";s:10:"navigation";s:10:"Navigation";s:16:"navigation_embed";s:17:"Embedded web page";s:16:"navigation_frame";s:23:"Moodle navigation frame";s:18:"navigation_give_up";s:35:"A single &quot;Give Up&quot; button";s:15:"navigation_help";s:890:"This setting specifies the navigation used in the quiz:
+
+**Moodle navigation bar**
+: the Moodle navigation bar will be displayed in the same window as the quiz at the top of the page
+
+**Moodle navigation frame**
+: the Moodle navigation bar will be displayed in a separate frame at the top of the quiz
+
+**Embedded web page**
+: the Moodle navigation bar will be displayed in with the Hot Potatoes quiz embedded within the window
+
+**Original navigation aids**
+: the quiz will be displayed with the navigation buttons, if any, defined in the quiz
+
+**A single "Give Up" button**
+: the quiz will be displayed with a single "Give Up" button at the top of the page
+
+**None**
+: the quiz will be displayed without any navigation aids, so when all questions have been answered correctly, depending on the "Show next quiz?" setting, Moodle will either return to the course page or display the next quiz";s:17:"navigation_moodle";s:46:"Standard Moodle navigation bars (top and side)";s:15:"navigation_none";s:4:"None";s:19:"navigation_original";s:24:"Original navigation aids";s:17:"navigation_topbar";s:45:"Top Moodle navigation bar only (no side bars)";s:10:"noactivity";s:11:"No activity";s:9:"nohotpots";s:16:"No HotPots found";s:14:"nomoreattempts";s:54:"Sorry, you have no more attempts left at this activity";s:11:"noresponses";s:66:"No information about individual questions and responses was found.";s:8:"noreview";s:64:"Sorry, you are not allowed to view details of this quiz attempt.";s:18:"noreviewafterclose";s:92:"Sorry, this quiz has closed. You are no longer allowed to view details of this quiz attempt.";s:19:"noreviewbeforeclose";s:71:"Sorry, you are not allowed to view details this quiz attempt until {$a}";s:20:"nosourcefilesettings";s:48:"HotPot record is missing source file information";s:15:"notattemptedyet";s:17:"Not attempted yet";s:12:"notavailable";s:55:"Sorry, this activity is not currently available to you.";s:12:"outputformat";s:13:"Output format";s:17:"outputformat_best";s:4:"Best";s:17:"outputformat_help";s:376:"The output format specifies how the content will be presented to the student.
+
+The output formats that are available depend on the type of the source file. Some types of source file have just one output format, while other types of source file have several output formats.
+
+The "best" setting will display the content using the optimal output format for the student's browser.";s:38:"outputformat_hp_6_jcloze_html_findit_a";s:20:"FindIt (a) from html";s:38:"outputformat_hp_6_jcloze_html_findit_b";s:20:"FindIt (b) from html";s:29:"outputformat_hp_6_jcloze_html";s:21:"JCloze (v6) from html";s:37:"outputformat_hp_6_jcloze_xml_anctscan";s:29:"ANCT-Scan from HP6 JCloze xml";s:37:"outputformat_hp_6_jcloze_xml_dropdown";s:28:"DropDown from HP6 JCloze xml";s:37:"outputformat_hp_6_jcloze_xml_findit_a";s:30:"FindIt (a) from HP6 JCloze xml";s:37:"outputformat_hp_6_jcloze_xml_findit_b";s:30:"FindIt (b) from HP6 JCloze xml";s:35:"outputformat_hp_6_jcloze_xml_jgloss";s:26:"JGloss from HP6 JCloze xml";s:43:"outputformat_hp_6_jcloze_xml_v6_autoadvance";s:39:"JCloze (v6) from HP6 xml (Auto-advance)";s:31:"outputformat_hp_6_jcloze_xml_v6";s:24:"JCloze (v6) from HP6 xml";s:29:"outputformat_hp_6_jcross_html";s:21:"JCross (v6) from html";s:31:"outputformat_hp_6_jcross_xml_v6";s:20:"JCross (v6) from xml";s:29:"outputformat_hp_6_jmatch_html";s:21:"JMatch (v6) from html";s:38:"outputformat_hp_6_jmatch_xml_flashcard";s:27:"JMatch (flashcard) from xml";s:36:"outputformat_hp_6_jmatch_xml_jmemori";s:16:"JMemori from xml";s:33:"outputformat_hp_6_jmatch_xml_sort";s:20:"JMatch Sort from xml";s:31:"outputformat_hp_6_jmatch_xml_v6";s:20:"JMatch (v6) from xml";s:36:"outputformat_hp_6_jmatch_xml_v6_plus";s:21:"JMatch (v6+) from xml";s:34:"outputformat_hp_6_jmatch_html_sort";s:21:"JMatch Sort from html";s:27:"outputformat_hp_6_jmix_html";s:19:"JMix (v6) from html";s:29:"outputformat_hp_6_jmix_xml_v6";s:18:"JMix (v6) from xml";s:34:"outputformat_hp_6_jmix_xml_v6_plus";s:19:"JMix (v6+) from xml";s:41:"outputformat_hp_6_jmix_xml_v6_plus_deluxe";s:56:"JMix (v6+ with prefix, suffix with distractors) from xml";s:43:"outputformat_hp_6_jmix_xml_v6_plus_keypress";s:34:"JMix (v6+ with key press) from xml";s:28:"outputformat_hp_6_jquiz_html";s:20:"JQuiz (v6) from html";s:30:"outputformat_hp_6_jquiz_xml_v6";s:19:"JQuiz (v6) from xml";s:42:"outputformat_hp_6_jquiz_xml_v6_autoadvance";s:34:"JQuiz (v6) from xml (Auto-advance)";s:35:"outputformat_hp_6_jquiz_xml_v6_exam";s:26:"JQuiz (v6) from xml (Exam)";s:30:"outputformat_hp_6_rhubarb_html";s:22:"Rhubarb (v6) from html";s:29:"outputformat_hp_6_rhubarb_xml";s:21:"Rhubarb (v6) from xml";s:31:"outputformat_hp_6_sequitur_html";s:23:"Sequitur (v6) from html";s:43:"outputformat_hp_6_sequitur_html_incremental";s:44:"Sequitur (v6) from html, incremental scoring";s:30:"outputformat_hp_6_sequitur_xml";s:22:"Sequitur (v6) from xml";s:42:"outputformat_hp_6_sequitur_xml_incremental";s:43:"Sequitur (v6) from xml, incremental scoring";s:25:"outputformat_html_ispring";s:17:"iSpring HTML file";s:23:"outputformat_html_xerte";s:15:"Xerte HTML file";s:23:"outputformat_html_xhtml";s:18:"Standard HTML file";s:18:"outputformat_qedoc";s:10:"Qedoc file";s:14:"overviewreport";s:8:"Overview";s:9:"penalties";s:9:"Penalties";s:7:"percent";s:7:"Percent";s:17:"pressoktocontinue";s:60:"Press OK to continue, or Cancel to stay on the current page.";s:13:"questionshort";s:6:"Q-{$a}";s:13:"quizname_help";s:23:"help text for Quiz name";s:7:"quizzes";s:7:"Quizzes";s:15:"removegradeitem";s:17:"Remove grade item";s:20:"removegradeitem_help";s:305:"Should the grade item for this activity be removed?
+
+**No**
+: the grade item for this activity in the Moodle gradebook will not be removed
+
+**Yes**
+: If the maximum grade or the grade weighting for this HotPot is set to zero, then the grade item for this activity will be removed from the Moodle gradebook";s:9:"responses";s:9:"Responses";s:15:"responsesreport";s:9:"Responses";s:18:"reviewafterattempt";s:26:"Allow review after attempt";s:16:"reviewafterclose";s:32:"Allow review after HotPot closes";s:19:"reviewduringattempt";s:27:"Allow review during attempt";s:13:"reviewoptions";s:14:"Review options";s:5:"score";s:5:"Score";s:12:"scoresreport";s:6:"Scores";s:14:"selectattempts";s:15:"Select attempts";s:16:"showerrormessage";s:18:"HotPot error: {$a}";s:10:"sourcefile";s:11:"Source file";s:15:"sourcefile_help";s:815:"This setting specifies the file containing the content that will be shown to the students.
+
+Usually the source file will have been created outside of Moodle, and then uploaded to the files area of a Moodle course.
+It may be an html file, or it may be another kind of file that has been created with authoring software such as Hot Potatoes or Qedoc.
+
+The source file may be specified as a folder and file path in the Moodle course files area, or it may be a url beginning with http:// or https://
+
+For Qedoc materials, the source file must be the url of a Qedoc module that has been uploaded to the Qedoc server.
+
+* e.g. http://www.qedoc.net/library/ABCDE_123.zip
+* For information about uploading Qedoc modules see: [Qedoc documentation: Uploading_modules](http://www.qedoc.org/en/index.php?title=Uploading_modules)";s:18:"sourcefilenotfound";s:38:"Source file not found (or empty): {$a}";s:6:"status";s:6:"Status";s:10:"stopbutton";s:16:"Show stop button";s:15:"stopbutton_help";s:386:"If this setting is enabled, a stop button will be inserted into the quiz.
+
+If a student clicks the stop button, the results so far will be returned to Moodle and the status of the quiz attempt will be set to abandoned.
+
+The text that is displayed on the stop button can be one of the preset phrases from Moodle's language packs, or the teacher can specify their own text for the button.";s:19:"stopbutton_langpack";s:18:"From language pack";s:19:"stopbutton_specific";s:17:"Use specific text";s:8:"stoptext";s:16:"Stop button text";s:12:"storedetails";s:49:"Store the raw XML details of HotPot quiz attempts";s:15:"studentfeedback";s:16:"Student feedback";s:20:"studentfeedback_help";s:708:"If enabled, a link to a pop-up feedback window will be displayed whenever the student clicks on the "Check" button. The feedback window allows students to discuss this quiz with their teacher and classmates in one of the following ways:
+
+**Web page**
+: requires URL of the web page, for example http://myserver.com/feedbackform.html
+
+**Feedback form**
+: requires URL of the form script, for example http://myserver.com/cgi-bin/formmail.pl
+
+**Moodle forum**
+: the forum index for the course will be displayed
+
+**Moodle messaging**
+: the Moodle instant messaging window will be displayed. If the course has several teachers, the student will be prompted to select a teacher before the messaging window appears.";s:7:"submits";s:11:"Submissions";s:14:"textsourcefile";s:20:"Get from source file";s:18:"textsourcefilename";s:20:"Use source file name";s:18:"textsourcefilepath";s:20:"Use source file path";s:14:"textsourcequiz";s:13:"Get from quiz";s:18:"textsourcespecific";s:13:"Specific text";s:9:"timeclose";s:15:"Available until";s:8:"timedout";s:9:"Timed out";s:9:"timelimit";s:10:"Time limit";s:14:"timelimit_help";s:634:"This setting specifies the maximum duration of a single attempt.
+
+**Use settings in source/template file**
+: the time limit will be taken from the source file or the template files for this output format
+
+**Use specific time**
+: the time limit specified on the HotPot quiz settings page will be used as the time limit for an attempt at this quiz. This setting overrides time limits in the source file, configuration file, or template files for this output format.
+
+**Disable**
+: no time limit will be set for attempts at this quiz.
+
+Note that if an attempt is resumed, the timer continues from where the attempt was previously paused.";s:16:"timelimitexpired";s:43:"The time limit for this attempt has expired";s:17:"timelimitspecific";s:17:"Use specific time";s:16:"timelimitsummary";s:26:"Time limit for one attempt";s:17:"timelimittemplate";s:36:"Use settings in source/template file";s:8:"timeopen";s:14:"Available from";s:13:"timeopenclose";s:20:"Open and close times";s:18:"timeopenclose_help";s:161:"You can specify times when the quiz is accessible for people to make attempts. Before the opening time, and after the closing time, the quiz will be unavailable.";s:5:"title";s:5:"Title";s:10:"title_help";s:505:"This setting specifies the title to be displayed on the web page.
+
+**HotPot activity name**
+: the name of this HotPot activity will be displayed as the web page title.
+
+**Get from source file**
+: the title, if any, defined in the source file will be used as the web page title.
+
+**Use source file name**
+: the source file name, excluding any folder names, will be used as the web page title.
+
+**Use source file path**
+: the source file path, including any folder names, will be used as the web page title.";s:10:"toolsindex";s:18:"HotPot Tools index";s:13:"unitname_help";s:23:"help text for unit name";s:22:"unrecognizedsourcefile";s:75:"Sorry, the HotPot module could not detect the type of the source file: {$a}";s:7:"updated";s:7:"Updated";s:14:"updatinggrades";s:22:"Updating HotPot grades";s:10:"usefilters";s:11:"Use filters";s:15:"usefilters_help";s:115:"If this setting is enabled, the content will be passed through the Moodle filters before being sent to the browser.";s:11:"useglossary";s:12:"Use glossary";s:16:"useglossary_help";s:255:"If this setting is enabled, the content will be passed through Moodle's Glossary Auto-linking filter before being sent to the browser.
+
+Note that this setting overrides the site administration setting to enable or disable the Glossary Auto-linking filter.";s:14:"usemediafilter";s:16:"Use media filter";s:19:"usemediafilter_help";s:1453:"This setting specifies the media filter to be used.
+
+**None**
+: the content will not be passed through any media filters.
+
+**Moodle's standard media filters**
+: the content will be passed through Moodle's standard media filters. These filters search for links to common types of sound and movie file, and convert those links to suitable media players.
+
+**HotPot media filter**
+: the content will be passed through filters which detect links, images, sounds and movies to be specified using a square bracket notation.
+
+The square-bracket notation has the following syntax:
+<code>[url player width height options]</code>
+
+**url**
+: the relative or absolute url of the media file
+
+**player** (optional)
+: the name of the player to be inserted. The default value for this setting is "moodle". The standard version of the HotPot module also offers the following players:
+: **dew**: an mp3 player
+: **dyer**: mp3 player by Bernard Dyer
+: **hbs**: mp3 player from Half-Baked Software
+: **image**: insert an image into the web page
+: **link**: insert a link to another web page
+
+**width** (optional)
+: the required width of the player
+
+**height** (optional)
+: the required height of the player. If omitted this value will be set to the same as the width setting.
+
+**options** (optional)
+: a comma-separated list options to be passed to the player. Each option can be a simple on/off switch, or a name value pair.
+: **name=value
+: **name="some value with spaces"";s:11:"viewreports";s:29:"View reports for {$a} user(s)";s:5:"views";s:5:"Views";s:9:"weighting";s:9:"Weighting";s:5:"wrong";s:5:"Wrong";s:12:"zeroduration";s:11:"No duration";s:9:"zeroscore";s:10:"Zero score";}

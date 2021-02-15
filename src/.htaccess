@@ -1,0 +1,5 @@
+<IfModule mod_php7.1.26.c>
+php_value upload_max_filesize 2097152000
+php_value post_max_size 2097152000
+php_value max_execution_time 6000
+</IfModule>
